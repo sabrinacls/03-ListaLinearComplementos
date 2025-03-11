@@ -121,9 +121,24 @@ void inserirElemento()
 }
 
 void excluirElemento()
-{
+{ 
+int pos;
+int valor;
+if (nElementos < MAX) {
+	cout << "Digite o elemento: ";
+	cin >> valor;
+	pos = posicaoElemento(valor);
 
-
+	if (pos != -1)
+	{
+		cout << "Elemento já esta na lista" << endl;
+	}
+	else
+	{
+		lista[nElementos] = valor;
+		nElementos++;
+	}
+}
 }
 
 void buscarElemento()
